@@ -24,6 +24,11 @@ services:
     container_name: yapi.yapi
     ports:
       - "3000:3000"
+    links:
+      - mongo:mongo-yapi
+    depends_on:
+      - mongo
+
 
 
 
