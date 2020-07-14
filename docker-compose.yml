@@ -25,9 +25,11 @@ services:
     ports:
       - "3000:3000"
     links:
-      - mongo:mongo-yapi
+      - mongo:mongo
     depends_on:
       - mongo
+    volumes_from:
+      - "mongo"
 
 
 

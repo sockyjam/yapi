@@ -1,9 +1,10 @@
 
+while true;do echo hello docker;sleep 1000;done  ## debug mode
 
-if [ ! -x "/init.lock" ]; then
+if [ ! -e "/data/db/init.lock" ]; then
 	cd /api/vendors
 	npm run install-server
-	touch /init.lock
+	touch /data/db/init.lock
 fi
 
 cd /api/vendors
