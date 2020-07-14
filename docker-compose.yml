@@ -1,0 +1,35 @@
+version: '2'
+networks:
+  default:
+    external:
+      name: yapi-network
+
+
+services:
+
+  mongo:
+    build:  mongo
+    image: sockyjam/yapi.mongo:v01
+    container_name: yapi.mongo
+    volumes:
+      - ./mongo/dbdata:/data/db
+    ports:
+      - "27017:27017"
+
+
+
+  yapi:
+    build: yapi
+    image: sockyjam/yapi.yapi:v01
+    container_name: yapi.yapi
+    ports:
+      - "3000:3000"
+
+
+
+
+
+
+
+
+
