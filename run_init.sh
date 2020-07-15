@@ -9,7 +9,7 @@ docker run -d \
 	  --name yapi \
 	    --link mongo-yapi:mongo \
 	      --workdir /api/vendors \
-	        -p 3000:3000 \
+	        -p 3001:3000 \
 		  registry.cn-hangzhou.aliyuncs.com/anoy/yapi \
 		    server/app.js
 
